@@ -2,7 +2,7 @@ const partners = [
   { 
     name: "LFP France", 
     image: "/lovable-uploads/1e2e5694-62b9-4677-afec-82a962cd1e41.png",
-    url: "https://www.lfp.fr"
+    url: "https://www.magasins-u.com"
   },
   { 
     name: "Euro 2016", 
@@ -27,7 +27,7 @@ const partners = [
   { 
     name: "Super U", 
     image: "/lovable-uploads/31242936-8388-4579-a45d-46fb17820cf3.png",
-    url: "https://www.magasins-u.com"
+    url: "https://avantscene.ma/index.php"
   },
   { 
     name: "New Yorker", 
