@@ -27,12 +27,20 @@ const Index = () => {
       {/* Header */}
       <header className="fixed w-full bg-background/80 backdrop-blur-sm border-b z-50">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <img 
               src="/lovable-uploads/26d050ae-77f6-48d3-adcd-50a887e89d9a.png" 
               alt="BELK Gardiennage" 
               className="h-20 w-auto"
             />
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                BELK
+              </span>
+              <span className="text-lg tracking-wider text-secondary">
+                Gardiennage
+              </span>
+            </div>
           </div>
           
           <NavigationMenu className="hidden md:flex">
@@ -101,7 +109,7 @@ const Index = () => {
 
       <main>
         <HeroSection />
-        <div id="services">
+        <div id="services" className="relative overflow-hidden">
           <ServicesSection />
         </div>
         <div id="values">
@@ -110,7 +118,7 @@ const Index = () => {
         <div id="partners">
           <PartnersSection />
         </div>
-        <div id="reviews">
+        <div id="reviews" className="relative overflow-hidden">
           <ReviewsSection />
         </div>
         <div id="about">

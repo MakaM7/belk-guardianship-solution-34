@@ -1,58 +1,75 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Shield, Briefcase, Dog, Car, Construction, Megaphone } from "lucide-react";
-
-const services = [
-  {
-    title: "Agent de Sécurité",
-    description: "La Sécurité des biens et des personnes est l'objet principal de notre métier. Nous disposons des Moyens humains les plus pointus et des moyens humains les plus pointus et des méthodes les plus modernes pour vus permettre d'exercer votre activité en toute quiétude 24h/24 et 7j/7 Faites nous confiance, nous en serons digne.",
-    icon: Shield
-  },
-  {
-    title: "Agent Sécurité Incendie",
-    description: "Nos agents sont sélectionnés pour leur sens de la prévention et leur maîtrise à des situations à haut risques. Ils ont tous été formés par des organismes reconnus. Ils suivent très régulièrement des stages de formation continue et ils participent à des entraînements sur feu réel. Même si leurs taches courantes se limitent le plus souvent à la surveillance des équipements et alarmes, ils sont potentiellement armés pour faire face à toutes les situations.",
-    icon: Briefcase
-  },
-  {
-    title: "Agent Cynophile",
-    description: "Pour tous les sites sensibles: Centres de recherche, Centres commerciaux, Parking, Choppers, Entrepôts, Immeubles & Résidences. Des équipes professionnelles, dynamiques et commenter sont en mesure de prévenir les situates risque et d'intervenir rapidement dans toutes les circonstances. Les équipes cynophiles sont particulièrement indiquées pour ces types de missions.",
-    icon: Dog
-  },
-  {
-    title: "Le Rondier Intervenant",
-    description: "En cas de déclenchement d'une alarme sur un site surveillé à distance, nos équipes mobiles spécialisées interviennent immédiatement sur place pour faire un état des lieux, avertir le PC de sécurité des faits constatés, et intervenir si nécessaire avec les forces de l'ordre.",
-    icon: Car
-  },
-  {
-    title: "Chantier Public",
-    description: "Nous proposons à nous clients une gamme complète d'équipements de haute technologie alliant performance et excellent rapport qualité/prix. Ces équipements permettent de multiplier les points de Surveillance sans augmenter le coût en effectif.",
-    icon: Construction
-  },
-  {
-    title: "Événement-concert",
-    description: "Pour Vous événements d'importance et d'envergure: Concerts, galas, soirées privées, congrès, rassemblements de toutes natures, BELK Gardiennage vous propose le meilleur service pour assurer l'indispensable qualité de l'acceuil et la surveillance nécessaire pour vous assurer une sécurité discrète.",
-    icon: Megaphone
-  }
-];
+import { useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 export function ServicesSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible');
+    }
+  }, [isInView, controls]);
+
+  const services = [
+    {
+      title: "Sécurité Événementielle",
+      description: "Protection professionnelle pour vos événements",
+      icon: "🎭"
+    },
+    {
+      title: "Surveillance 24/7",
+      description: "Surveillance continue de vos locaux",
+      icon: "👁️"
+    },
+    {
+      title: "Protection Rapprochée",
+      description: "Services de garde du corps personnalisés",
+      icon: "🛡️"
+    },
+    {
+      title: "Sécurité Mobile",
+      description: "Patrouilles et interventions mobiles",
+      icon: "🚓"
+    }
+  ];
+
   return (
-    <section className="py-20 bg-background" id="services">
+    <section className="py-20 bg-secondary/5" ref={ref}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Nos Services</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex justify-center mb-4">
-                  <service.icon className="w-16 h-16 text-primary" />
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-transparent pointer-events-none" />
+          <div className="space-y-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: index * 0.2
+                    }
+                  }
+                }}
+                className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="text-4xl">{service.icon}</span>
+                  <div>
+                    <h3 className="text-xl font-semibold">{service.title}</h3>
+                    <p className="text-muted-foreground">{service.description}</p>
+                  </div>
                 </div>
-                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                <CardDescription className="text-sm text-justify">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
