@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { ServiceCard } from './ServiceCard';
 
 export function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const controls = useAnimation();
 
   const services = [
     {
@@ -28,6 +28,26 @@ export function ServicesSection() {
       title: "Sécurité Mobile",
       description: "Notre service de sécurité mobile, opérant dans les principales villes du Maroc et de France, dispose d'une flotte de 10 véhicules équipés et de 25 agents mobiles effectuant plus de 100 rondes quotidiennes. Nous couvrons un périmètre de 150 km² à travers les zones urbaines et périurbaines, avec une présence particulière dans les zones industrielles de Tanger et les quartiers d'affaires parisiens. Nos équipes, formées aux spécificités sécuritaires des deux pays, maintiennent un temps d'intervention moyen de 8 minutes et une disponibilité de 99.9%. L'année dernière, nos patrouilles ont déjoué 80 tentatives d'intrusion grâce à notre connaissance approfondie du terrain.",
       icon: "🚓"
+    },
+    {
+      title: "Formation et Certification",
+      description: "Notre centre de formation, accrédité en France et au Maroc, propose des programmes bilingues de haute qualité. Nous formons annuellement plus de 200 agents de sécurité selon les normes internationales, avec un taux de réussite de 95%. Nos formations incluent des modules spécialisés en sécurité événementielle, protection rapprochée, et surveillance électronique. Notre équipe de 10 formateurs certifiés cumule plus de 100 ans d'expérience dans le domaine de la sécurité au Maroc et en France.",
+      icon: "📚"
+    },
+    {
+      title: "Audit et Conseil",
+      description: "Notre département conseil, composé de 8 experts internationaux, réalise plus de 50 audits de sécurité par an pour des entreprises opérant entre le Maroc et la France. Nous analysons les risques selon les standards ISO 31000 et proposons des solutions adaptées aux contextes locaux. Notre expertise a permis à nos clients de réduire leurs incidents de sécurité de 60% en moyenne et d'optimiser leurs budgets de sécurité de 30%. Nous assurons également la conformité avec les réglementations RGPD et la loi marocaine 09-08.",
+      icon: "📋"
+    },
+    {
+      title: "Sécurité Maritime",
+      description: "Spécialisés dans la sécurité portuaire entre Tanger Med et Marseille, nos 20 agents maritimes qualifiés protègent plus de 30 navires commerciaux par mois. Notre équipe assure la sécurité des installations portuaires, la surveillance des conteneurs et la protection contre la piraterie maritime. Nous collaborons étroitement avec les autorités portuaires des deux pays et avons contribué à une réduction de 75% des incidents dans les zones sous notre surveillance. Notre système de tracking maritime couvre plus de 1,000 km de côtes.",
+      icon: "⚓"
+    },
+    {
+      title: "Cybersécurité",
+      description: "Notre centre d'opérations de sécurité (SOC), basé à Casablanca avec une antenne à Paris, emploie 12 experts en cybersécurité surveillant 24/7 les infrastructures critiques. Nous protégeons plus de 100 entreprises contre les cybermenaces, avec un taux de détection de 99.9% des incidents. Notre équipe bilingue traite en moyenne 1,000 alertes par jour et a bloqué plus de 5,000 tentatives d'intrusion l'année dernière. Nous assurons la conformité avec les normes ISO 27001 et les réglementations locales.",
+      icon: "🔒"
     }
   ];
 
@@ -104,7 +124,6 @@ export function ServicesSection() {
               dragElastic={1}
               onDragEnd={(e, { offset, velocity }) => {
                 const swipe = swipePower(offset.x, velocity.x);
-
                 if (swipe < -swipeConfidenceThreshold) {
                   paginate(1);
                 } else if (swipe > swipeConfidenceThreshold) {
@@ -113,11 +132,11 @@ export function ServicesSection() {
               }}
               className="absolute w-full max-w-3xl"
             >
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 shadow-xl">
-                <div className="text-6xl mb-6 flex justify-center">{services[currentIndex].icon}</div>
-                <h3 className="text-2xl font-bold text-center mb-6">{services[currentIndex].title}</h3>
-                <p className="text-center text-lg leading-relaxed">{services[currentIndex].description}</p>
-              </div>
+              <ServiceCard
+                title={services[currentIndex].title}
+                description={services[currentIndex].description}
+                icon={services[currentIndex].icon}
+              />
             </motion.div>
           </AnimatePresence>
 
