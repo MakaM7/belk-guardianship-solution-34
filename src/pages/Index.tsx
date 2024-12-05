@@ -6,6 +6,7 @@ import { ValuesSection } from "@/components/ValuesSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { ContactSection } from "@/components/ContactSection";
 import { AboutSection } from "@/components/AboutSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { useEffect } from "react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 
@@ -30,7 +31,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/26d050ae-77f6-48d3-adcd-50a887e89d9a.png" 
               alt="BELK Gardiennage" 
-              className="h-20 w-auto" // Increased height from h-12 to h-20
+              className="h-20 w-auto"
             />
           </div>
           
@@ -60,6 +61,15 @@ const Index = () => {
                   className="bg-transparent hover:bg-primary/10"
                 >
                   Partenaires
+                </NavigationMenuTrigger>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  onClick={() => scrollToSection('reviews')}
+                  className="bg-transparent hover:bg-primary/10"
+                >
+                  Avis Clients
                 </NavigationMenuTrigger>
               </NavigationMenuItem>
               
@@ -99,6 +109,9 @@ const Index = () => {
         </div>
         <div id="partners">
           <PartnersSection />
+        </div>
+        <div id="reviews">
+          <ReviewsSection />
         </div>
         <div id="about">
           <AboutSection />
