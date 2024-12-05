@@ -34,11 +34,11 @@ const Index = () => {
               className="h-20 w-auto"
             />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-primary">
                 BELK
               </span>
-              <span className="text-lg tracking-wider text-secondary">
-                Gardiennage
+              <span className="text-lg tracking-wider text-primary font-semibold">
+                GARDIENNAGE
               </span>
             </div>
           </div>
@@ -107,25 +107,37 @@ const Index = () => {
         </div>
       </header>
 
-      <main>
+      <main className="space-y-12">
         <HeroSection />
-        <div id="services" className="relative overflow-hidden">
-          <ServicesSection />
+        <div id="services" className="relative overflow-hidden p-6">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+            <ServicesSection />
+          </div>
         </div>
-        <div id="values">
-          <ValuesSection />
+        <div id="values" className="p-6">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+            <ValuesSection />
+          </div>
         </div>
-        <div id="partners">
-          <PartnersSection />
+        <div id="partners" className="p-6">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+            <PartnersSection />
+          </div>
         </div>
-        <div id="reviews" className="relative overflow-hidden">
-          <ReviewsSection />
+        <div id="reviews" className="relative overflow-hidden p-6">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+            <ReviewsSection />
+          </div>
         </div>
-        <div id="about">
-          <AboutSection />
+        <div id="about" className="p-6">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+            <AboutSection />
+          </div>
         </div>
-        <div id="contact">
-          <ContactSection />
+        <div id="contact" className="p-6">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl border border-white/20 shadow-xl">
+            <ContactSection />
+          </div>
         </div>
       </main>
     </div>
