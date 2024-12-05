@@ -6,9 +6,12 @@ export function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1582135739786-3f32f33d973b?q=80&w=2940&auto=format&fit=crop')`
+          backgroundImage: `url('https://images.unsplash.com/photo-1582135739786-3f32f33d973b?q=80&w=2940&auto=format&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       />
       <div className="absolute inset-0 bg-black/60" />
