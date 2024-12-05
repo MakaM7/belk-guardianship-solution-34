@@ -19,7 +19,7 @@ export function HeroSection() {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
@@ -42,10 +42,10 @@ export function HeroSection() {
       ))}
       <div className="absolute inset-0 bg-black/60 z-[2]" />
       <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
           BELK GARDIENNAGE
         </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-primary">
           Votre Partenaire de Confiance en Sécurité
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

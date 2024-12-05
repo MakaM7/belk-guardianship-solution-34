@@ -11,42 +11,42 @@ export function ServicesSection() {
   const services = [
     {
       title: "Sécurité Événementielle",
-      description: "Notre équipe de 45 agents spécialisés excelle dans la sécurité événementielle au Maroc et en France. Basés à Kénitra avec des opérations dans les principales villes marocaines, nous sécurisons plus de 200 événements annuels, des festivals traditionnels marocains aux événements culturels français, en passant par les grands salons internationaux. Notre expertise bilingue (français-arabe) et notre connaissance approfondie des protocoles de sécurité des deux pays nous permettent d'assurer une protection optimale pour des événements accueillant jusqu'à 50,000 personnes.",
+      description: "Notre équipe de 45 agents spécialisés excelle dans la sécurité événementielle au Maroc et en France. Nous sécurisons plus de 200 événements annuels, des festivals traditionnels marocains aux événements culturels français, en passant par les grands salons internationaux. Notre expertise bilingue (français-arabe) et notre connaissance approfondie des protocoles de sécurité des deux pays nous permettent d'assurer une protection optimale pour des événements accueillant jusqu'à 50,000 personnes.",
       icon: "🎭"
     },
     {
       title: "Surveillance 24/7",
-      description: "Notre centre de surveillance ultra-moderne, basé à Kénitra avec une antenne à Paris, emploie 30 agents qualifiés surveillant plus de 1,000 caméras en temps réel. Nous protégeons 75 sites à travers le Maroc et la France, incluant des zones industrielles, des complexes commerciaux et des sites touristiques majeurs. Notre système de vidéosurveillance, conforme aux réglementations RGPD et aux lois marocaines sur la protection des données, intègre une IA avancée qui a permis de prévenir 150 incidents potentiels l'année dernière.",
+      description: "Notre centre de surveillance ultra-moderne emploie 30 agents qualifiés surveillant plus de 1,000 caméras en temps réel. Nous protégeons 75 sites à travers le Maroc et la France, incluant des zones industrielles, des complexes commerciaux et des sites touristiques majeurs. Notre système de vidéosurveillance, conforme aux réglementations RGPD et aux lois marocaines sur la protection des données, intègre une IA avancée qui a permis de prévenir 150 incidents potentiels l'année dernière.",
       icon: "👁️"
     },
     {
       title: "Protection Rapprochée",
-      description: "Notre unité d'élite de protection rapprochée, basée à Kénitra, compte 15 agents hautement qualifiés, formés selon les standards français et marocains les plus stricts. Nos agents, anciens des forces spéciales marocaines et françaises, cumulent plus de 200 ans d'expérience combinée. Nous assurons la sécurité de dignitaires, d'hommes d'affaires et de personnalités publiques lors de leurs déplacements entre le Maroc et la France, avec plus de 1,000 missions réussies.",
+      description: "Notre unité d'élite de protection rapprochée compte 15 agents hautement qualifiés, formés selon les standards français et marocains les plus stricts. Nos agents, anciens des forces spéciales marocaines et françaises, cumulent plus de 200 ans d'expérience combinée. Nous assurons la sécurité de dignitaires, d'hommes d'affaires et de personnalités publiques lors de leurs déplacements entre le Maroc et la France, avec plus de 1,000 missions réussies.",
       icon: "🛡️"
     },
     {
       title: "Sécurité Mobile",
-      description: "Notre service de sécurité mobile, dirigé depuis Kénitra et opérant dans les principales villes du Maroc et de France, dispose d'une flotte de 10 véhicules équipés et de 25 agents mobiles effectuant plus de 100 rondes quotidiennes. Nous couvrons un périmètre de 150 km² à travers les zones urbaines et périurbaines. Nos équipes maintiennent un temps d'intervention moyen de 8 minutes et une disponibilité de 99.9%.",
+      description: "Notre service de sécurité mobile dispose d'une flotte de 10 véhicules équipés et de 25 agents mobiles effectuant plus de 100 rondes quotidiennes. Nous couvrons un périmètre de 150 km² à travers les zones urbaines et périurbaines. Nos équipes maintiennent un temps d'intervention moyen de 8 minutes et une disponibilité de 99.9%.",
       icon: "🚓"
     },
     {
       title: "Formation et Certification",
-      description: "Notre centre de formation à Kénitra, accrédité en France et au Maroc, propose des programmes bilingues de haute qualité. Nous formons annuellement plus de 200 agents de sécurité selon les normes internationales, avec un taux de réussite de 95%. Nos formations incluent des modules spécialisés en sécurité événementielle, protection rapprochée, et surveillance électronique. Notre équipe de 10 formateurs certifiés cumule plus de 100 ans d'expérience.",
+      description: "Notre centre de formation accrédité en France et au Maroc propose des programmes bilingues de haute qualité. Nous formons annuellement plus de 200 agents de sécurité selon les normes internationales, avec un taux de réussite de 95%. Nos formations incluent des modules spécialisés en sécurité événementielle, protection rapprochée, et surveillance électronique.",
       icon: "📚"
     },
     {
       title: "Audit et Conseil",
-      description: "Notre département conseil, basé à Kénitra, composé de 8 experts internationaux, réalise plus de 50 audits de sécurité par an pour des entreprises opérant entre le Maroc et la France. Nous analysons les risques selon les standards ISO 31000 et proposons des solutions adaptées aux contextes locaux. Notre expertise a permis à nos clients de réduire leurs incidents de sécurité de 60% en moyenne et d'optimiser leurs budgets de sécurité de 30%.",
+      description: "Notre département conseil, composé de 8 experts internationaux, réalise plus de 50 audits de sécurité par an pour des entreprises opérant entre le Maroc et la France. Nous analysons les risques selon les standards ISO 31000 et proposons des solutions adaptées aux contextes locaux. Notre expertise a permis à nos clients de réduire leurs incidents de sécurité de 60% en moyenne.",
       icon: "📋"
     },
     {
       title: "Sécurité Maritime",
-      description: "Depuis notre siège à Kénitra, nous coordonnons la sécurité portuaire entre Tanger Med et Marseille. Nos 20 agents maritimes qualifiés protègent plus de 30 navires commerciaux par mois. Notre équipe assure la sécurité des installations portuaires, la surveillance des conteneurs et la protection contre la piraterie maritime. Nous collaborons étroitement avec les autorités portuaires des deux pays et avons contribué à une réduction de 75% des incidents.",
+      description: "Nous coordonnons la sécurité portuaire entre Tanger Med et Marseille. Nos 20 agents maritimes qualifiés protègent plus de 30 navires commerciaux par mois. Notre équipe assure la sécurité des installations portuaires, la surveillance des conteneurs et la protection contre la piraterie maritime. Nous collaborons étroitement avec les autorités portuaires des deux pays.",
       icon: "⚓"
     },
     {
       title: "Cybersécurité",
-      description: "Notre centre d'opérations de sécurité (SOC), basé à Kénitra avec une antenne à Paris, emploie 12 experts en cybersécurité surveillant 24/7 les infrastructures critiques. Nous protégeons plus de 100 entreprises contre les cybermenaces, avec un taux de détection de 99.9% des incidents. Notre équipe bilingue traite en moyenne 1,000 alertes par jour et a bloqué plus de 5,000 tentatives d'intrusion l'année dernière.",
+      description: "Notre centre d'opérations de sécurité (SOC) emploie 12 experts en cybersécurité surveillant 24/7 les infrastructures critiques. Nous protégeons plus de 100 entreprises contre les cybermenaces, avec un taux de détection de 99.9% des incidents. Notre équipe bilingue traite en moyenne 1,000 alertes par jour et a bloqué plus de 5,000 tentatives d'intrusion l'année dernière.",
       icon: "🔒"
     }
   ];
