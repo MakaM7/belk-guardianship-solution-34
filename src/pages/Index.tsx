@@ -25,12 +25,12 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed w-full bg-background/80 backdrop-blur-sm border-b z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/6b7d37de-f269-4468-ba2e-6657f3a187ce.png" 
+              src="/lovable-uploads/26d050ae-77f6-48d3-adcd-50a887e89d9a.png" 
               alt="BELK Gardiennage" 
-              className="h-12 w-auto"
+              className="h-20 w-auto" // Increased height from h-12 to h-20
             />
           </div>
           
