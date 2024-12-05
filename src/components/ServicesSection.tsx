@@ -70,16 +70,18 @@ export function ServicesSection() {
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 animate-aurora"></div>
       
-      <style jsx global>{`
-        @keyframes aurora {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-        .animate-aurora {
-          animation: aurora 15s linear infinite;
-          background-size: 200% 200%;
-        }
-      `}</style>
+      <style>
+        {`
+          @keyframes aurora {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+          }
+          .animate-aurora {
+            animation: aurora 15s linear infinite;
+            background-size: 200% 200%;
+          }
+        `}
+      </style>
 
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Nos Services</h2>
