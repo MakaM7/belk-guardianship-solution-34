@@ -11,22 +11,22 @@ export function ServicesSection() {
   const services = [
     {
       title: "Sécurité Événementielle",
-      description: "Fort d'une équipe de 45 agents spécialisés en sécurité événementielle, nous assurons la protection de plus de 200 événements par an. Notre expertise couvre des festivals accueillant jusqu'à 50,000 personnes, des conférences d'entreprise, et des événements sportifs majeurs. Avec un taux de satisfaction client de 98% et une moyenne de 0 incident majeur sur les 3 dernières années, notre équipe maintient des standards de sécurité exceptionnels tout en préservant une atmosphère accueillante.",
+      description: "Notre équipe de 45 agents spécialisés excelle dans la sécurité événementielle au Maroc et en France. Nous sécurisons plus de 200 événements annuels, des festivals traditionnels marocains aux événements culturels français, en passant par les grands salons internationaux à Casablanca et Paris. Notre expertise bilingue (français-arabe) et notre connaissance approfondie des protocoles de sécurité des deux pays nous permettent d'assurer une protection optimale pour des événements accueillant jusqu'à 50,000 personnes. Nous maintenons un taux de satisfaction client de 98% grâce à notre approche qui allie professionnalisme international et sensibilité culturelle locale.",
       icon: "🎭"
     },
     {
       title: "Surveillance 24/7",
-      description: "Notre centre de surveillance ultramoderne, opéré par 30 agents qualifiés, monitore plus de 1,000 caméras en temps réel. Nous protégeons actuellement 75 sites différents, avec un temps de réponse moyen de 3 minutes en cas d'alerte. Notre système de vidéosurveillance AI-powered a permis de prévenir 150 incidents potentiels l'année dernière, représentant une économie moyenne de 500,000€ pour nos clients.",
+      description: "Notre centre de surveillance ultra-moderne, basé à Casablanca avec une antenne à Paris, emploie 30 agents qualifiés surveillant plus de 1,000 caméras en temps réel. Nous protégeons 75 sites à travers le Maroc et la France, incluant des zones industrielles, des complexes commerciaux et des sites touristiques majeurs. Notre système de vidéosurveillance, conforme aux réglementations RGPD et aux lois marocaines sur la protection des données, intègre une IA avancée qui a permis de prévenir 150 incidents potentiels l'année dernière. Notre équipe bilingue assure une communication fluide 24/7 avec un temps de réponse moyen de 3 minutes.",
       icon: "👁️"
     },
     {
       title: "Protection Rapprochée",
-      description: "Notre unité d'élite de 15 agents de protection rapprochée, tous anciens des forces spéciales ou de la protection diplomatique, cumule plus de 200 ans d'expérience combinée. Nous assurons la sécurité de 20 VIP en continu, avec plus de 1,000 missions réussies à l'international. Notre équipe maîtrise 8 langues différentes et maintient une certification annuelle aux dernières techniques de protection.",
+      description: "Notre unité d'élite de protection rapprochée compte 15 agents hautement qualifiés, formés selon les standards français et marocains les plus stricts. Nos agents, anciens des forces spéciales marocaines et françaises, cumulent plus de 200 ans d'expérience combinée. Nous assurons la sécurité de dignitaires, d'hommes d'affaires et de personnalités publiques lors de leurs déplacements entre le Maroc et la France, avec plus de 1,000 missions réussies. Notre équipe maîtrise parfaitement l'arabe, le français et plusieurs dialectes locaux, garantissant une communication efficace dans toutes les situations.",
       icon: "🛡️"
     },
     {
       title: "Sécurité Mobile",
-      description: "Avec une flotte de 10 véhicules équipés et 25 agents mobiles, nous effectuons plus de 100 rondes quotidiennes. Notre service de patrouille couvre un périmètre de 150 km² et intervient sur 50 sites différents. Le temps moyen d'intervention est de 8 minutes, avec une disponibilité de 99.9%. Nos équipes mobiles ont permis de déjouer 80 tentatives d'intrusion l'année dernière, démontrant l'efficacité de notre approche préventive.",
+      description: "Notre service de sécurité mobile, opérant dans les principales villes du Maroc et de France, dispose d'une flotte de 10 véhicules équipés et de 25 agents mobiles effectuant plus de 100 rondes quotidiennes. Nous couvrons un périmètre de 150 km² à travers les zones urbaines et périurbaines, avec une présence particulière dans les zones industrielles de Tanger et les quartiers d'affaires parisiens. Nos équipes, formées aux spécificités sécuritaires des deux pays, maintiennent un temps d'intervention moyen de 8 minutes et une disponibilité de 99.9%. L'année dernière, nos patrouilles ont déjoué 80 tentatives d'intrusion grâce à notre connaissance approfondie du terrain.",
       icon: "🚓"
     }
   ];
