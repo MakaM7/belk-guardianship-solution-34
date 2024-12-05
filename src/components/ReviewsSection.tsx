@@ -57,13 +57,13 @@ export function ReviewsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="py-20 bg-background" id="reviews">
+    <section className="py-8 bg-background" id="reviews">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Ce Que Disent Nos Clients</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Ce Que Disent Nos Clients</h2>
         <div className="overflow-hidden">
           <motion.div
             ref={containerRef}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -72,31 +72,31 @@ export function ReviewsSection() {
             {reviews.map((review, index) => (
               <motion.div
                 key={index}
-                className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-all"
+                className="bg-card rounded-lg p-4 shadow-lg hover:shadow-xl transition-all"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-3">
                   <img
                     src={review.logo}
                     alt={`${review.company} logo`}
-                    className="h-12 w-auto mr-4"
+                    className="h-10 w-auto mr-3"
                   />
                   <div>
-                    <h3 className="font-semibold text-lg">{review.company}</h3>
-                    <p className="text-sm text-muted-foreground">{review.author}</p>
+                    <h3 className="font-semibold text-base">{review.company}</h3>
+                    <p className="text-xs text-muted-foreground">{review.author}</p>
                     <p className="text-xs text-muted-foreground">{review.position}</p>
                   </div>
                 </div>
-                <div className="flex mb-4">
+                <div className="flex mb-2">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    <Star key={i} className="w-3 h-3 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-card-foreground">{review.content}</p>
+                <p className="text-card-foreground text-sm">{review.content}</p>
               </motion.div>
             ))}
           </motion.div>
